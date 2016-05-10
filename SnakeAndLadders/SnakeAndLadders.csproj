@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{58F5F2EB-9E3F-4535-A1BA-C9D13462E2AD}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SnakeAndLadders</RootNamespace>
+    <AssemblyName>SnakeAndLadders</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=3.0.5813.39031, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.0.1\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArrayContainsAnotherArray.cs" />
+    <Compile Include="BreadthFirstSearch.cs" />
+    <Compile Include="CamelsAndBananas.cs" />
+    <Compile Include="CandidateCode.cs" />
+    <Compile Include="ContiguousSubArray.cs" />
+    <Compile Include="GeneSteady.cs" />
+    <Compile Include="GraphThoeryTest.cs" />
+    <Compile Include="GridSearch.cs" />
+    <Compile Include="HeapAlgorithmns.cs" />
+    <Compile Include="HRQuickSearch.cs" />
+    <Compile Include="HRSteadyGene.cs" />
+    <Compile Include="InsertionSort.cs" />
+    <Compile Include="LinkedListOperations.cs" />
+    <Compile Include="MergeSort.cs" />
+    <Compile Include="NumbersMultiplication.cs" />
+    <Compile Include="Point.cs" />
+    <Compile Include="PrefixTree.cs" />
+    <Compile Include="PrefixTreeList.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queuejava.cs" />
+    <Compile Include="QuickSort.cs" />
+    <Compile Include="SnakeAndLadder.cs" />
+    <Compile Include="StackOperations.cs" />
+    <Compile Include="StackTest.cs" />
+    <Compile Include="SteadyGene.cs" />
+    <Compile Include="SteadyGeneModified.cs" />
+    <Compile Include="StringPermutations.cs" />
+    <Compile Include="SwapTreeNodes.cs" />
+    <Compile Include="TechGigContest.cs" />
+    <Compile Include="TestBigFactorials.cs" />
+    <Compile Include="TestHeap.cs" />
+    <Compile Include="TestJobs.cs" />
+    <Compile Include="TestLinkedList.cs" />
+    <Compile Include="TestMatrix.cs" />
+    <Compile Include="TestPrefixTree.cs" />
+    <Compile Include="TestStringPermutations.cs" />
+    <Compile Include="TestTowers.cs" />
+    <Compile Include="TowersOfHanoi.cs" />
+    <Compile Include="WeldingJob.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
