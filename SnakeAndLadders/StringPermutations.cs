@@ -8,14 +8,12 @@ namespace SnakeAndLadders
 {
     public class StringPermutations
     {
-         Dictionary<char,int> map = new Dictionary<char, int>();
         List<string> list = new List<string>();
         private string myString;
 
         public StringPermutations(string s)
         {
             myString = s;
-            var c = map.Values.Count(x => x%2 == 1);
         }
 
         public void Permute(int start, int end)
