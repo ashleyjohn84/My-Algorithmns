@@ -14,11 +14,12 @@ namespace SnakeAndLadders
         [Test]
         public void Test1()
         {
-            int[] array = new[] {7,1,4,2};
+            int[] array = new[] {7,1};
             NonDivisibleSubSet obj = new NonDivisibleSubSet();
-            List<int> output = Enumerable.Repeat(-1, array.Length + 1).ToList();
+            //List<int> output = Enumerable.Repeat(-1, array.Length + 1).ToList();
+            List<int> output = new List<int>();
             List<int> maxList = Enumerable.Repeat(-1, array.Length + 1).ToList();
-            int c = obj.GetMaxmemo(array, 3, output, 0, 4, 0, maxList.ToArray());
+            obj.GetMax(array, 3, output, 0, 2, 0);
 
         }
     }

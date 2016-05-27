@@ -15,49 +15,60 @@ namespace SnakeAndLadders
             Console.WriteLine(str);
             if (start == end )
             {
-               
-                
-                maxList[start] = 0;
-                
 
-                return maxList[start];
+
+
+
+
+                return 0;
             }
             int m1 = 0, m2 = 0, m3 = 0;
             if (!isDivisible(output, k, array[start]))
             {
-                m3 = (maxList[start + 1] != -1 ? maxList[start + 1] : GetMaxmemo(array, k, output, start + 1, end, counter, maxList));
+                m3 = GetMaxmemo(array, k, output, start + 1, end, counter, maxList);
                 if (!isDivisible(output, k, array[start]))
                 {
                     output.Add(array[start]);
-                    m1 = 1 +
-                         (maxList[start + 1] != -1
-                             ? maxList[start + 1]
-                             : GetMaxmemo(array, k, output, start + 1, end, counter, maxList));
+                    m1 = 1 + GetMaxmemo(array, k, output, start + 1, end, counter, maxList);
                 }
             }
             else
             {
-                m2 = (maxList[start + 1] != -1 ? maxList[start + 1] : GetMaxmemo(array, k, output, start + 1, end, counter, maxList));
+                m2 = GetMaxmemo(array, k, output, start + 1, end, counter, maxList);
             }
             int c = Math.Max(m1, m3);
-            maxList[start] = Math.Max(c, m2);
-            return maxList[start];
+            return Math.Max(c, m2);
+            
 
         }
 
-        public int GetMax(int[] array, int k, int[] output, int start, int end, int counter)
+        public void GetMax(int[] array, int k, List<int> output, int start, int end, int counter)
         {
-            string str = String.Format("Calling Start {0} End {1}", start, end);
+            string str = GetString(output);
             Console.WriteLine(str);
-            if (start == end - 1)
+            if (start == end)
             {
 
-                return 1;
+                return;
             }
-            int m1 =  GetMax(array, k, output, start + 1, end, counter);
-            int m2 = GetMax(array, k, output, start + 1, end, counter);
-            return Math.Max(m1, m2);
+            output.Add(array[start]);
+            GetMax(array, k, output, start + 1, end, counter);
+            output.Remove(array[start]);
+            GetMax(array, k, output, start + 1, end, counter);
 
+            return;
+
+        }
+
+        private string GetString(List<int> output)
+        {
+            string opString = String.Empty;
+            foreach (var str in output)
+            {
+                opString = opString + String.Format(" {0} ", str);
+            }
+            opString = opString + " * ";
+            return opString;
         }
 
 

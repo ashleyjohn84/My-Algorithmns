@@ -77,6 +77,7 @@
     <Compile Include="SteadyGene.cs" />
     <Compile Include="SteadyGeneModified.cs" />
     <Compile Include="StringPermutations.cs" />
+    <Compile Include="SumOfNumbers.cs" />
     <Compile Include="SwapTreeNodes.cs" />
     <Compile Include="TechGigContest.cs" />
     <Compile Include="TestBigFactorials.cs" />

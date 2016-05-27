@@ -78,7 +78,7 @@ namespace SnakeAndLadders
                 }
                    
             }
-            obj.BFS1(new int[17], new bool[17],sdinput);
+            obj.DFS(new int[17], new bool[17],sdinput);
 
             
         }
@@ -109,7 +109,7 @@ namespace SnakeAndLadders
                 }
 
             }
-            obj.BFS1(new int[1000 * 1000 + 1], new bool[1000 * 1000 + 1],sdinput);
+            obj.DFS(new int[1000 * 1000 + 1], new bool[1000 * 1000 + 1],sdinput);
 
           
         }

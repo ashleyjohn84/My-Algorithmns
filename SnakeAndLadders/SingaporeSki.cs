@@ -133,7 +133,7 @@ namespace SnakeAndLadders
          * */
         #endregion
 
-        public void BFS1(int[] level ,bool[] visited,int[] input)
+        public void DFS(int[] level ,bool[] visited,int[] input)
         {
             for (int i = 1; i <= Size*Size; i++)
             {
