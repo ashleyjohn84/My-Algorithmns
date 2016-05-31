@@ -23,20 +23,7 @@ namespace SnakeAndLadders
             return a || b;
         }
 
-        public static bool IsPossibleMemoized(int[] array, int currentSum, int finalSum, int start, int end,int[] output)
-        {
-            counter++;
-            if (currentSum == finalSum)
-            {
-                output[start] = 1;
-                return true;
-            }
-            if (currentSum > finalSum)
-                return false;
-            if (start == end)
-                return false;
-          
-        }
+       
     }
 
     [TestFixture]
