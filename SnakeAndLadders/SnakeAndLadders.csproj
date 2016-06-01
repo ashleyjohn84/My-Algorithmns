@@ -79,6 +79,7 @@
     <Compile Include="StringPermutations.cs" />
     <Compile Include="SumOfNumbers.cs" />
     <Compile Include="SwapTreeNodes.cs" />
+    <Compile Include="SynchronousShopping.cs" />
     <Compile Include="TechGigContest.cs" />
     <Compile Include="TestBigFactorials.cs" />
     <Compile Include="TestHeap.cs" />
