@@ -23,18 +23,20 @@ namespace SnakeAndLadders
             this.roads = roads;
             this.fishTypes = fishTypes;
             fish = new int[cities+1];
+            adjacencyList = new LinkedList<Tuple<int, int>>[cities + 1];
             for (int i = 0; i <= cities; i++)
             {
                 adjacencyList[i] = new LinkedList<Tuple<int, int>>();
             }
-            distance = new int[cities,fishTypes];
+            distance = new int[cities+1,(1 << fishTypes)];
+            queue = new Queue<Tuple<int, Tuple<int, int>>>();
         }
 
         public void AddFish(int index,int[] input)
         {
             int type = 0;
-            for (int i = 1; i < input[0]; i++)
-                type = type | (1 << (input[i] - 1));
+            for (int i = 1; i <= input[0]; i++)
+                type = type | (1 << (input[i]-1));
             fish[index] = type;
         }
 
@@ -53,7 +55,7 @@ namespace SnakeAndLadders
         public void ShortestPath()
         {
             for (int i = 1; i <= cities; i++)
-                for (int j = 0; j < fishTypes; j++)
+                for (int j = 0; j < (1 << fishTypes); j++)
                     distance[i, j] = Int32.MaxValue;
             Push(1, fish[1], 0);
             while(queue.Count > 0)
