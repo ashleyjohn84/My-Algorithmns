@@ -10,7 +10,7 @@ namespace SnakeAndLadders
     {
         List<string> list = new List<string>();
         private string myString;
-
+        char[][] obj = new char[3][];
         public StringPermutations(string s)
         {
             myString = s;

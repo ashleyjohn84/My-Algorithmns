@@ -63,7 +63,7 @@ namespace SnakeAndLadders
                 var x = queue.Dequeue();
 
             //TODO - Get Vertex with min weight first;
-                foreach(var list in adjacencyList[x.Item2.Item1])
+                foreach(var list in adjacencyList[x.Item2.Item1]) //x.Item2.Item1 - gives you the city
                 {
                     Push(list.Item1, fish[list.Item1] | x.Item2.Item2, distance[x.Item2.Item1, x.Item2.Item2] + list.Item2);
                 }
