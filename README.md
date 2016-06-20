@@ -1,2 +1,2 @@
 # My-Algorithmns
-Contains a set of algorithms mainly HackerRank solutions
+Contains a set of algorithms mainly HackerRank solutions...
