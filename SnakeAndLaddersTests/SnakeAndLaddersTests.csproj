@@ -51,6 +51,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="CoinChangeProblemTests.cs" />
     <Compile Include="MandragoraTests.cs" />
     <Compile Include="NonDivisibleSubSetTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

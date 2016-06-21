@@ -50,6 +50,7 @@
     <Compile Include="BreadthFirstSearch.cs" />
     <Compile Include="CamelsAndBananas.cs" />
     <Compile Include="CandidateCode.cs" />
+    <Compile Include="CoinChangeProblem.cs" />
     <Compile Include="ContiguousSubArray.cs" />
     <Compile Include="GeneSteady.cs" />
     <Compile Include="GraphThoeryTest.cs" />
