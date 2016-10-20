@@ -13,9 +13,9 @@ namespace SnakeAndLadders
         [Test]
         public void TestPermutations()
         {
-            int[] item = Console.ReadLine().Split(new char[] {' '}).Select(x => Int32.Parse(x)).ToArray();
-            StringPermutations obj = new StringPermutations("ABCD");
-            obj.Permute(0, 3);
+            
+            StringPermutations obj = new StringPermutations("ABC");
+            obj.Permute(0, 2);
         }
 
         [Test]
