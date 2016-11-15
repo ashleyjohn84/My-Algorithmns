@@ -18,6 +18,14 @@ namespace SnakeAndLadders
             obj.Permute(0, 2);
         }
 
+
+        [Test]
+        public void TestPermutationsNew()
+        {
+
+            StringPermutations.CombinationsNew("ABC");
+        }
+
         [Test]
         public void TestCamelsAndBananas()
         {

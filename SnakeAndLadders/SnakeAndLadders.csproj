@@ -68,6 +68,7 @@
     <Compile Include="CandidateCode.cs" />
     <Compile Include="CoinChangeProblem.cs" />
     <Compile Include="ContiguousSubArray.cs" />
+    <Compile Include="Dijkstra_ShortestPath.cs" />
     <Compile Include="GeneSteady.cs" />
     <Compile Include="GraphThoeryTest.cs" />
     <Compile Include="GridSearch.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="Point.cs" />
     <Compile Include="PrefixTree.cs" />
     <Compile Include="PrefixTreeList.cs" />
+    <Compile Include="Prims_MinimumSpanningTree.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queuejava.cs" />

@@ -24,12 +24,19 @@ namespace SnakeAndLadders
             }
 
             var task1 = GetWords("https://en.wikipedia.org/wiki/Pakistan");
-            var list1 = task.Result.Split(new[] { " " }, StringSplitOptions.RemoveEmptyEntries);
+            var list1 = task1.Result.Split(new[] { " " }, StringSplitOptions.RemoveEmptyEntries);
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
+            int count = 0;
+            List<string> ncommon = new List<string>();
             foreach (var s in list1)
             {
-                tree.Contains(s);
+                if (!(tree.Contains(s)))
+                {
+                    count++;
+                    ncommon.Add(s);
+                }
+                  
             }
             stopwatch.Stop();
             var time = stopwatch.Elapsed;

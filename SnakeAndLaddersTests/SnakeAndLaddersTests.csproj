@@ -46,7 +46,9 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
       </ItemGroup>
     </Otherwise>
   </Choose>
@@ -56,9 +58,11 @@
     <Compile Include="MandragoraTests.cs" />
     <Compile Include="NonDivisibleSubSetTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringPermutationsTests.cs" />
     <Compile Include="SumOfAllDigitsUpToNTests.cs" />
     <Compile Include="SumOfNumbersTests.cs" />
     <Compile Include="SynchronousShoppingTests.cs" />
+    <Compile Include="Dijkstra_Test.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SnakeAndLadders\SnakeAndLadders.csproj">
