@@ -38,5 +38,19 @@ namespace SnakeAndLaddersTests
             Prims_MinimumSpanningTree t = new Prims_MinimumSpanningTree();
             t.Prim(graph,graph.Length);
         }
+
+        [TestMethod]
+        public void TestMethod2_IsCycle()
+        {
+            int[][] graph = new int[][]{
+                                  new int[]{0, 2, 0, 6, 0},
+                                  new int[]{2, 0, 3, 8, 5},
+                                  new int[]{0, 3, 0, 0, 7},
+                                  new int[]{6, 8, 0, 0, 9},
+                                  new int[]{0, 5, 7, 9, 0}
+                                 };
+            UnionFind t = new UnionFind();
+            t.isCycle(graph, graph.Length);
+        }
     }
 }
