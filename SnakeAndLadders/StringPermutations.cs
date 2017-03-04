@@ -19,7 +19,11 @@ namespace SnakeAndLadders
         public void Permute(int start, int end)
         {
             if(start == end)
-                list.Add(myString);
+            {
+                Console.WriteLine(myString);
+            }
+                //list.Add(myString);
+
             else
             {
                 for (int i = start; i <= end; i++)

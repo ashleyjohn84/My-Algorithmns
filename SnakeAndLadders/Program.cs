@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Reactive;
+using System.Reactive.Linq;
+using System.Reactive.Concurrency;
+using System.Threading;
 
 namespace SnakeAndLadders
 {
@@ -26,7 +30,7 @@ namespace SnakeAndLadders
         80,100},{ 87, 24},{ 93, 73},{ 95, 75},{ 98, 78}
             };
              * 
-             * */
+          
             SnakeAndLadder obj = new SnakeAndLadder(100);
             obj.JumpTable = new Dictionary<int, int>()
             {
@@ -34,6 +38,29 @@ namespace SnakeAndLadders
             };
             obj.GetMinSteps();
             int y = obj.Output;
+
+       * */
+
+            Console.WriteLine("Thread {0}", Thread.CurrentThread.ManagedThreadId);
+            var query = from number in Enumerable.Range(1, 5) select number;
+           /* foreach (var number in query)
+            {
+                Console.WriteLine(number);
+            }*/
+            var observableQuery = query.ToObservable(NewThreadScheduler.Default);
+            observableQuery.Subscribe(Write, Finish);
+            Console.ReadLine();
+        }
+
+        static void Write(int x)
+        {
+            Console.WriteLine("Thread {0}", Thread.CurrentThread.ManagedThreadId);
+            Console.WriteLine(x);
+        }
+
+        static void Finish()
+        {
+            Console.WriteLine("All Done!");
         }
     }
 }
